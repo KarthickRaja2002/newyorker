@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New Yorker-Sign Up</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  	<script src="https://kit.fontawesome.com/330f675b37.js" crossorigin="anonymous"></script>
+  	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+li{
+  padding: 10px;
+}
+.container-fluid,.nav{
+  background-color: black;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.centered h2{
+  color: #ff6f00;
+  transition: width 5s;
+}
+.centered h6{
+  color: #6bfff3;
+  transition: width 5s;
+  animation-name: example;
+  animation-duration: 4s;
+}
+.centered h2:hover{
+  width: 1000px;
+}
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+  font-size: 17px;
+  color: #fcfc03;
+  height: 75px;
+  background-color: black;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.topnav a:hover {
+  background-color: #fafa5f;
+  color: black;
+}
+.topnav a.active {
+  background-color: #9afcbb;
+  color: black;
+}
+.icon{
+  color: white;
+}
+#book{
+  color: #11ff00;
+}
+td,tr{
+  padding: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+  vertical-align: middle;
+}
+.footer{
+  padding: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+}
+.logo{
+  padding: 5px;
+  vertical-align: middle;
+  margin: auto;
+}
+
+
+.wave{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	z-index: -1;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap :7rem;
+    padding: 0 2rem;
+}
+
+.img{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.login-content{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	text-align: center;
+}
+
+.img img{
+	width: 500px;
+}
+
+form{
+	width: 360px;
+}
+
+.login-content img{
+    height: 100px;
+}
+
+.login-content h2{
+	margin: 15px 0;
+	color: #333;
+	text-transform: uppercase;
+	font-size: 2.9rem;
+}
+
+.login-content .input-div{
+	position: relative;
+    display: grid;
+    grid-template-columns: 7% 93%;
+    margin: 25px 0;
+    padding: 5px 0;
+    border-bottom: 2px solid #d9d9d9;
+}
+
+.login-content .input-div.one{
+	margin-top: 0;
+}
+
+.i{
+	color: #d9d9d9;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.i i{
+	transition: .3s;
+}
+
+.input-div > div{
+    position: relative;
+	height: 45px;
+}
+
+.input-div > div > h5{
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #999;
+	font-size: 18px;
+	transition: .3s;
+}
+
+.input-div:before, .input-div:after{
+	content: '';
+	position: absolute;
+	bottom: -2px;
+	width: 0%;
+	height: 2px;
+	background-color: #38d39f;
+	transition: .4s;
+}
+
+.input-div:before{
+	right: 50%;
+}
+
+.input-div:after{
+	left: 50%;
+}
+
+.input-div.focus:before, .input-div.focus:after{
+	width: 50%;
+}
+
+.input-div.focus > div > h5{
+	top: -5px;
+	font-size: 15px;
+}
+
+.input-div.focus > .i > i{
+	color: #38d39f;
+}
+
+.input-div > div > input{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	border: none;
+	outline: none;
+	background: none;
+	padding: 0.5rem 0.7rem;
+	font-size: 1.2rem;
+	color: #555;
+	font-family: 'poppins', sans-serif;
+}
+
+.input-div.pass{
+	margin-bottom: 4px;
+}
+
+a{
+	/*display: block;
+	text-align: right;*/
+	text-decoration: none;
+	color: #999;
+	font-size: 0.9rem;
+	transition: .3s;
+}
+
+a:hover{
+	color: #38d39f;
+}
+
+.btn{
+	display: block;
+	width: 100%;
+	height: 50px;
+	border-radius: 25px;
+	outline: none;
+	border: none;
+	background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
+	background-size: 200%;
+	font-size: 1.2rem;
+	color: #fff;
+	font-family: 'Poppins', sans-serif;
+	text-transform: uppercase;
+	margin: 1rem 0;
+	cursor: pointer;
+	transition: .5s;
+}
+.btn:hover{
+	background-position: right;
+}
+
+
+@media screen and (max-width: 1050px){
+	.container{
+		grid-gap: 5rem;
+	}
+}
+
+@media screen and (max-width: 1000px){
+	form{
+		width: 290px;
+	}
+
+	.login-content h2{
+        font-size: 2.4rem;
+        margin: 8px 0;
+	}
+
+	.img img{
+		width: 400px;
+	}
+}
+
+@media screen and (max-width: 900px){
+	.container{
+		grid-template-columns: 1fr;
+	}
+
+	.img{
+		display: none;
+	}
+
+	.wave{
+		display: none;
+	}
+
+	.login-content{
+		justify-content: center;
+	}
+}
+.btn1{
+    padding: 15px;
+    color: white;
+    background-color: red;
+    border-radius: 35px;
+    border-color: red;
+    font-weight: bold;
+}
+.btn2{
+    padding: 15px;
+    color: white;
+    background-color: blue;
+    border-radius: 35px;
+    border-color: blue;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+	<div class="container-fluid topnav">
+		<div class="row">
+		  <div class="col-sm-1">
+			<a href="#"><i class="fas fa-bars fa-2x" style="width: 50px;height: 50px;"></i></a>
+		  </div>
+		  <div class="col-sm-3">
+			<img src="https://images.ctfassets.net/hbmwn5pbkdff/23utJPKytM7DN6xn7PE0ur/98d1b2799158bf844f7551e8c44adc5e/the-new-yorker-logo-white.png" alt="" width="150px" height="50px" class="logo">
+		  </div>
+		  <div class="col-sm-8">
+			  <a href="home.html">Home</a>
+				  <a href="about.html" >About Us</a>
+				  <a href="magazine.html" >Magazines</a>
+				  <a href="story.html">Stories</a>
+				  <a href="news.html" >Newspapers</a>
+			  <a href="login.html" class="active">Login</a>
+			  <a href="#" ><i class="fas fa-search"></i></a>
+			  <a href="#" ><i class="fas fa-shopping-cart"></i></a>
+			  <a href="#" ><i class="far fa-user"></i></a>
+			  
+		  </div>
+		</div>
+	</div>
+	<div>
+		<img class="wave" src="wave.png">
+	<div class="container">
+		<div class="img">
+			<img src="bg.svg">
+		</div>
+		<div class="login-content">
+			<form action="#">
+				<img src="https://freesvg.org/img/Female-Avatar-2.png">
+				<h2 class="title">Welcome</h2>
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+           		   <div class="div">
+           		   		<h5>Username</h5>
+           		   		<input type="text" class="input" id="Runame">
+           		   </div>
+           		</div>
+                   <div class="input-div one">
+                    <div class="i">
+                        <i class="far fa-envelope"></i>
+                    </div>
+                    <div class="div">
+                            <h5>Email Address</h5>
+                            <input type="email" class="input" id="Remail">
+                    </div>
+                 </div>
+           		<div class="input-div pass">
+           		   <div class="i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+           		    	<h5>Password</h5>
+           		    	<input type="password" class="input" id="Rpass">
+            	   </div>
+            	</div>
+                <div class="input-div pass">
+                    <div class="i"> 
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <div class="div">
+                         <h5>Confirm Password</h5>
+                         <input type="password" class="input" id="Rcpass">
+                 </div>
+              </div>
+            	<input type="submit" class="btn" value="Sign Up" id="register">
+				<a href="login.html">Existing User? Login Here!</a><br><br>
+                <button class="btn1">Sign Up with <i class="fab fa-google"></i></button>
+                <button class="btn2">Sign Up with <i class="fab fa-facebook"></i></button>
+            </form>
+        </div>
+    </div>
+	</div>
+    <br><br><br><br><br><br><br><br><br>
+	<div class="container-fluid" style="background-color: rgb(248, 246, 104); padding: 10px;text-align: center; vertical-align: middle;">
+		<h4>Subscribe now and enjoy unlimited reading on<br><b>iPad, iPhone & Android</b> devices at no extra cost</h4>
+		<table class="center">
+		  <tbody>
+			<tr>
+			  <td><button class="btnn btn-primary" style="background-color: black; border: black;"><img src="ios.png"></button></td>
+			  <td><button class="btnn btn-primary" style="background-color: black; border: black;"><img src="googleplay.png"></button></td>
+			</tr>
+		  </tbody>
+		</table>
+	  </div>
+	  <div class="container-fluid text-center">
+		<div class="row">
+		  <div class="col-md-3" style="float: left;">
+			<img src="https://images.ctfassets.net/hbmwn5pbkdff/23utJPKytM7DN6xn7PE0ur/98d1b2799158bf844f7551e8c44adc5e/the-new-yorker-logo-white.png" alt="" width="200px" height="75px" class="d-inline-block align-text-top" style="padding: 10px;">
+			<h5 style="color: #fcfc03; padding: 10px;">Follow Us On</h5>
+			<a href="https://www.facebook.com/"><i class="fab fa-facebook fa-2x" style="color: #5caaf3; padding: 10px;"></i></a>
+			<a href="https://twitter.com/"><i class="fab fa-twitter fa-2x" style="color: #a3f56c; padding: 10px;"></i></a>
+			<a href="https://www.instagram.com/"><i class="fab fa-instagram fa-2x" style="color: #d5fa06; padding: 10px;"></i></i></a>
+			<a href="https://www.pinterest.com/"><i class="fab fa-pinterest fa-2x" style="color: #fa203d; padding: 10px;"></i></a>
+		  </div>
+		  <div class="col-md-9 footer">
+			<br>
+			<a href="home.html" class="active" style="color: #f59aec; padding: 10px; font-size: 24px;">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="about.html" style="color: #f59aec; font-size: 24px;">About Us</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="magazine.html" style="color: #f59aec; font-size: 24px;">Magazines</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="story.html" style="color: #f59aec; font-size: 24px;">Stories</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="news.html" style="color: #f59aec; font-size: 24px;">Newspapers</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="login.html" style="color: #f59aec; font-size: 24px;">Login</a><br><br>
+			<h5 style="color: #a3f56c;">&copy;&nbsp;2021. All Rights Reserved.</h5>
+			<a href="home.html" style="color: #a3f56c;">The New Yorker&reg;</a>
+		  </div>
+		</div>
+	  </div>
+	<script>
+		const inputs = document.querySelectorAll(".input");
+function addcl(){
+	let parent = this.parentNode.parentNode;
+	parent.classList.add("focus");
+}
+
+function remcl(){
+	let parent = this.parentNode.parentNode;
+	if(this.value == ""){
+		parent.classList.remove("focus");
+	}
+}
+inputs.forEach(input => {
+	input.addEventListener("focus", addcl);
+	input.addEventListener("blur", remcl);
+});
+		$("#register").click(function(){
+			var pass=$("#Rpass").val();
+			var cpass=$("#Rcpass").val();
+			if(pass==cpass){
+				swal({
+  					title: "Registration Success",
+  					text: "Registered Successfully!",
+  					icon: "success",
+  					button: "OK",
+				});
+				//alert("Success");
+			}
+			else{
+				swal({
+					title: "Registration Failed",
+  					text: "Check your password!",
+  					icon: "error",
+  					button: "OK",
+		  		});
+			}
+		});
+	</script>
+</body>
+</html>

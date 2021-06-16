@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/330f675b37.js" crossorigin="anonymous"></script>
+    <title>New Yorker-Stories</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+<style>
+li{
+  padding: 10px;
+}
+.container-fluid,.nav{
+  background-color: black;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.centered h2{
+  color: #ff6f00;
+  transition: width 5s;
+}
+.centered h6{
+  color: #6bfff3;
+  transition: width 5s;
+  animation-name: example;
+  animation-duration: 4s;
+}
+.centered h2:hover{
+  width: 1000px;
+}
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+  font-size: 17px;
+  color: #fcfc03;
+  height: 75px;
+  background-color: black;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.topnav a:hover {
+  background-color: #fafa5f;
+  color: black;
+}
+.topnav a.active {
+  background-color: #9afcbb;
+  color: black;
+}
+.icon{
+  color: white;
+}
+#book{
+  color: #11ff00;
+}
+td,tr{
+  padding: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  vertical-align: middle;
+}
+.footer{
+  padding: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+}
+.logo{
+  padding: 5px;
+  vertical-align: middle;
+  margin: auto;
+}
+#jit {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+  background-image: url('https://cdn.hipwallpaper.com/i/43/21/Z8kKGs.jpg');
+  height: 200%;
+  background-position: center;
+  background-repeat: repeat-y;
+  background-size: cover;
+}
+</style>
+</head>
+<body class="bg">
+    <div class="container-fluid topnav">
+      <div class="row">
+        <div class="col-sm-1">
+          <a href="#"><i class="fas fa-bars fa-2x" style="width: 50px;height: 50px;"></i></a>
+        </div>
+        <div class="col-sm-3">
+          <img src="https://images.ctfassets.net/hbmwn5pbkdff/23utJPKytM7DN6xn7PE0ur/98d1b2799158bf844f7551e8c44adc5e/the-new-yorker-logo-white.png" alt="" width="150px" height="50px" class="logo">
+        </div>
+        <div class="col-sm-8">
+            <a href="home.html">Home</a>
+		    <a href="about.html">About Us</a>
+		    <a href="magazine.html">Magazines</a>
+		    <a href="story.html" class="active">Stories</a>
+		    <a href="news.html" >Newspapers</a>
+            <a href="login.html" >Login</a>
+            <a href="#" ><i class="fas fa-search"></i></a>
+            <a href="#" ><i class="fas fa-shopping-cart"></i></a>
+            <a href="#" ><i class="far fa-user"></i></a>
+            
+        </div>
+      </div>
+    </div><br>
+    <div class="container">
+        <h3 style="color: white;">Stories</h3>
+        <div class="row">
+          <div class="col-md-2">
+            <h4 style="background-color: #eafa06; color: #205afa; padding: 12px; border-radius: 10px;">Flash News:</h4>
+          </div>
+          <div class="col-md-10">
+            <marquee style="background-color: #fa203d; color: white; padding: 10px; border-radius: 0px 20px;"><h5>>>Baby's Thumb Gets Cut During Surgery, Parents Accuse Nurse Of Negligence.  >>Mention Covid Deaths In Certificates, Ensure Aid Reaches Orphans: AIADMK.   >>"We Struggled To Buy A Kilo Of Rice": Tamil Nadu Reopens, Relaxes Curbs.   >>AIADMK Backs DMK's Demand To Abolish NEET In Letter To PM Modi.   >>Tamil Nadu Extends Covid Lockdown Till June 14, Identifies 11 Hotspots.   >>Tamil Nadu Announces Free Bus Travel For Differently-Abled, Transwomen.</h5></marquee>
+          </div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card text-justify" style="border: 2px solid rgb(219, 216, 216); padding: 10px; border-radius: 10px;">
+                    <div class="card-body">
+                      <h5 class="card-title"><b>NATIONAL</b></h5>
+                      <i class="fas fa-record-vinyl" style="color: red;"></i><a href="#"> Coronavirus updates | India records more than 2,100 deaths</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card text-justify" style="border: 2px solid rgb(219, 216, 216); padding: 10px; border-radius: 10px;">
+                    <div class="card-body">
+                      <h5 class="card-title"><b>NATIONAL</b></h5>
+                      <i class="fas fa-record-vinyl" style="color: red;"></i><a href="#"> Rajasthan objects to Asaram Bapu’s bail plea in SC</a>
+                    </div>
+                </div>
+            </div>
+        </div><br>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card text-justify" style="border: 2px solid rgb(219, 216, 216); padding: 10px; border-radius: 10px;">
+                    <div class="card-body">
+                      <h5 class="card-title"><b>INTERNATIONAL</b></h5>
+                      <i class="fas fa-record-vinyl" style="color: green;"></i><a href="#"> World Bank opposes vaccine intellectual property waiver as WTO talks resume</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card text-justify" style="border: 2px solid rgb(219, 216, 216); padding: 10px; border-radius: 10px;">
+                    <div class="card-body">
+                      <h5 class="card-title"><b>INTERNATIONAL</b></h5>
+                      <i class="fas fa-record-vinyl" style="color: green;"></i><a href="#"> Israel claims Hamas tried to disrupt Iron Dome from Gaza tower that housed news outlets</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card text-justify" style="border: 2px solid rgb(219, 216, 216); padding: 10px; border-radius: 10px;">
+                    <div class="card-body">
+                      <h5 class="card-title"><b>TAMILNADU</b></h5>
+                      <i class="fas fa-record-vinyl" style="color: blue;"></i><a href="#"> Tamil Nadu govt adds 430 Covid beds in and around Chennai</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card text-justify" style="border: 2px solid rgb(219, 216, 216); padding: 10px; border-radius: 10px;">
+                    <div class="card-body">
+                      <h5 class="card-title"><b>TAMILNADU</b></h5>
+                      <i class="fas fa-record-vinyl" style="color: blue;"></i><a href="#"> Tamil Nadu records 14,023 fresh Covid-19 cases, 267 deaths</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card text-justify" style="border: 2px solid rgb(219, 216, 216); padding: 10px; border-radius: 10px;">
+                    <div class="card-body">
+                      <h5 class="card-title"><b>KERALA</b></h5>
+                      <i class="fas fa-record-vinyl" style="color: greenyellow;"></i><a href="#"> Revision in vaccine policy helps Kerala from spending Rs 1000 cr</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card text-justify" style="border: 2px solid rgb(219, 216, 216); padding: 10px; border-radius: 10px;">
+                    <div class="card-body">
+                      <h5 class="card-title"><b>KERALA</b></h5>
+                      <i class="fas fa-record-vinyl" style="color: greenyellow;"></i><a href="#"> Village officer recovered from Munnani dam in Kottayam</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card text-justify" style="border: 2px solid rgb(219, 216, 216); padding: 10px; border-radius: 10px;">
+                    <div class="card-body">
+                      <h5 class="card-title"><b>UNITED STATES</b></h5>
+                      <i class="fas fa-record-vinyl" style="color: rgb(255, 47, 161);"></i><a href="#"> Telegraph Fire becomes ninth largest in Arizona history; Mescal Fire 23% contained</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card text-justify" style="border: 2px solid rgb(219, 216, 216); padding: 10px; border-radius: 10px;">
+                    <div class="card-body">
+                      <h5 class="card-title"><b>UNITED STATES</b></h5>
+                      <i class="fas fa-record-vinyl" style="color: rgb(255, 47, 161);"></i><a href="#"> 'A choice between food or living': Prescription drug prices up again in 2020</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="center" style="text-align: center;">
+        <button class="btn btn-info" style="height: 70px; width: 200px; font-weight: bold;">Load More...</button><br><br>
+        <button class="btn btn-danger"><- Prev</button>
+        <button class="btn btn-success">Next -></button>
+      </div>
+    <br><br>
+    <div class="container-fluid" style="background-color: rgb(248, 246, 104); padding: 10px;text-align: center; vertical-align: middle;">
+      <h4>Subscribe now and enjoy unlimited reading on<br><b>iPad, iPhone & Android</b> devices at no extra cost</h4>
+      <table class="center">
+        <tbody>
+          <tr>
+            <td><button class="btn btn-primary" style="background-color: black; border: black;"><img src="ios.png"></button></td>
+            <td><button class="btn btn-primary" style="background-color: black; border: black;"><img src="googleplay.png"></button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="container-fluid text-center">
+      <div class="row">
+        <div class="col-md-3">
+          <img src="https://images.ctfassets.net/hbmwn5pbkdff/23utJPKytM7DN6xn7PE0ur/98d1b2799158bf844f7551e8c44adc5e/the-new-yorker-logo-white.png" alt="" width="200px" height="75px" class="d-inline-block align-text-top" style="padding: 10px;">
+          <h5 style="color: #fcfc03; padding: 10px;">Follow Us On</h5>
+          <a href="https://www.facebook.com/"><i class="fab fa-facebook fa-2x" style="color: #5caaf3; padding: 10px;"></i></a>
+          <a href="https://twitter.com/"><i class="fab fa-twitter fa-2x" style="color: #a3f56c; padding: 10px;"></i></a>
+          <a href="https://www.instagram.com/"><i class="fab fa-instagram fa-2x" style="color: #d5fa06; padding: 10px;"></i></i></a>
+          <a href="https://www.pinterest.com/"><i class="fab fa-pinterest fa-2x" style="color: #fa203d; padding: 10px;"></i></a>
+        </div>
+        <div class="col-md-9 footer">
+          <br>
+          <a href="home.html"style="color: #f59aec; padding: 10px;">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="about.html" style="color: #f59aec;">About Us</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="magazine.html" style="color: #f59aec;">Magazines</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="story.html" style="color: #f59aec;">Stories</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="news.html" style="color: #f59aec;">Newspapers</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="login.html" style="color: #f59aec;">Login</a><br><br>
+          <h5 style="color: #a3f56c;">&copy;&nbsp;2021. All Rights Reserved.</h5>
+          <a href="home.html" style="color: #a3f56c;">The New Yorker&reg;</a>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
